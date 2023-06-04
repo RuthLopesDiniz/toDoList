@@ -1,32 +1,47 @@
-const button = document.querySelector('.buttum-add-task')
+const button = document.querySelector('.buttum-add-task')//mapear elemento
 const input = document.querySelector('.input-task')
 const completList = document.querySelector('.list')
+ 
 
 let myListItens = []
 
 function addNewTask(){
-    myListItens.push(input.value)
+    myListItens.push({
+        task: input.value,
+        finished: false,
+    })
 
     input.value = ''
     showTasks()
 }
 
-function showTasks(task, index){
+function showTasks(){
     let newLi = ''
 
-myListItens.forEach((task) => {
+
+myListItens.forEach((item, index) => {//percorre item por item da lista
     newLi = newLi + `
-            <li class="task">
-                <img src="./img/checked.png" alt="check-na-tarefa">
-                <p>${task}</p>
+            <li class="task ${item.finished && 'done'}">
+                <img src="./img/checked.png" alt="check-na-tarefa" onclick="finishTask(${index})">
+                <p>${item.task}</p>
                 <img src="./img/trash.png" alt="tarefa-para-o-lixo" onclick="deletItem(${index})">
             </li>
             `
 })
+
 completList.innerHTML = newLi
 }
-function deletItem(index){
-    console.log("delete")//continuar aqui
+
+
+function finishTask(index){
+    myListItens[index].finished = !myListItens[index].finished
+    showTasks()
 }
+
+function deletItem(index){
+    myListItens.splice(index, 1)
+    showTasks()
+}
+
 
 button.addEventListener('click', addNewTask)
