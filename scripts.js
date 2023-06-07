@@ -1,19 +1,26 @@
 const button = document.querySelector('.buttum-add-task')//mapear elemento
 const input = document.querySelector('.input-task')
 const completList = document.querySelector('.list')
- 
+
 
 let myListItens = []
 
 function addNewTask(){
+    if(input.value < 1){
+        Alert("digite uma palavra")
+        return false
+    }
+    else{
     myListItens.push({
         task: input.value,
         finished: false,
     })
-
+    
     input.value = ''
     showTasks()
 }
+}
+
 
 function showTasks(){
     let newLi = ''
@@ -30,6 +37,8 @@ myListItens.forEach((item, index) => {//percorre item por item da lista
 })
 
 completList.innerHTML = newLi
+
+localStorage.setItem('lista', JSON.stringify(myListItens))
 }
 
 
@@ -43,5 +52,15 @@ function deletItem(index){
     showTasks()
 }
 
+function recarregarTarefas(){
+    const tasksDoLocalStorage = localStorage.getItem('lista')
+
+    if(tasksDoLocalStorage){
+    myListItens = JSON.parse(tasksDoLocalStorage) 
+    }
+    showTasks() 
+}
+
+recarregarTarefas()
 
 button.addEventListener('click', addNewTask)
