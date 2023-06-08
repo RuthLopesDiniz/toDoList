@@ -1,11 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     outline: none;
 }
-.container{
+
+.container {
     background-color: #d1d1d1;
     width: 500px;
     border-radius: 10px;
@@ -13,12 +14,12 @@
     margin: 100px auto 0;
 }
 
-body{
+body {
     background: url("./img/background2.png");
 
 }
 
-.input-task{
+.input-task {
     border: none;
     border-radius: 5px;
     width: 300px;
@@ -26,7 +27,7 @@ body{
     padding-left: 10px;
 }
 
-.buttum-add-task{
+.buttum-add-task {
     border: none;
     border-radius: 5px;
     height: 40px;
@@ -39,22 +40,22 @@ body{
     font-weight: 700px;
 }
 
-.buttum-add-task:hover{
+.buttum-add-task:hover {
     opacity: 0.8;
 }
 
-.buttum-add-task :active{
+.buttum-add-task :active {
     opacity: 0.4;
 }
 
-.list{
+.list {
     width: 100%;
     list-style: none;
     margin-top: 30px;
     margin-top: 30px;
 }
 
-.task{
+.task {
     background-color: #f2f2f2;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
     height: 50px;
@@ -67,45 +68,46 @@ body{
     cursor: pointer;
 }
 
-img{
+img {
     height: 25px;
-opacity: 0;
-transition: opacity 0.5s ease-in-out;}
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
-.task:hover img{
+.task:hover img {
     opacity: 1;
 }
 
-.done{
+.done {
     background-color: #8fac55;
     text-decoration: line-through;
 }
 
-@media only screen and (max-device-width: 900px){
-    .container{
+@media only screen and (max-device-width: 800px) {
+    .container {
         width: 350px;
         border-radius: 10px;
         padding: 10px 10px;
         justify-content: center;
-    } 
+    }
+
+    .input-task {
+        width: 200px;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .buttum-add-task {
+        height: 40px;
+        padding: 0 10px;
+
+    }
+
+
+    .task {
+        width: 330px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
 }
-
-.input-task{
-    width: 200px;
-    height: 40px;
-    padding: 10px;
-}
-
-.buttum-add-task{
-    height: 40px;
-    padding: 0 10px;
-    
-}
-
-
-.task{
-    width: 330px;
-    align-items: center;
-    justify-content: space-between;
-}
-
