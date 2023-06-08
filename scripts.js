@@ -7,7 +7,7 @@ let myListItens = []
 
 function addNewTask(){
     if(input.value < 1){
-        Alert("digite uma palavra")
+        alert("Digite uma tarefa!")
         return false
     }
     else{
