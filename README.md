@@ -12,4 +12,4 @@ Mostra frase de alerta caso haja uma tentativa de incluir sem ter nada digitado 
 
 <img src="https://github.com/RuthLopesDiniz/toDoList/blob/master/CapturarRES.PNG?raw=true"></br>
 
-<a href="https://master--glittery-syrniki-421e6f.netlify.app/">Clique aqui para ver projeto publicado!</a>
+<a href="https://master--glittery-syrniki-421e6f.netlify.app/" target="_blank">Clique aqui para ver projeto publicado!</a>
