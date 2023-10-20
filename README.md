@@ -2,6 +2,7 @@
 
 To Do List foi criado usando as tecnologias: HTML, CSS e JavaScript.</br>
 Funcionalidades: incluir tarefa, marcar como feita e deletar.
+<h2><a href="https://master--glittery-syrniki-421e6f.netlify.app/" target="_blank">Clique aqui para ver projeto publicado!</a></h2>
 
 Dados são salvos no locaLStorage, quando a tela é recarregada não perde os dados inseridos.</br>
 Mostra frase de alerta caso haja uma tentativa de incluir sem ter nada digitado no input.</br>
